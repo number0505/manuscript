@@ -1,0 +1,107 @@
+@font-face {
+	font-family: 'WhyteInktrap';
+	src: url(font/ABCWhyteInktrap-Regular-Trial.otf) format("opentype");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "NNNouvelleGrotesk";
+	src: url(font/NNNouvelleGroteskTrial-Medium.otf) format("opentype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "NNNouvelleGrotesk";
+	src: url(font/NNNouvelleGroteskTrial-Light.otf) format("opentype");
+	font-weight: light;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+
+section{
+	color: #232426;
+	padding: 116px 144px 116px 144px;
+}
+
+.gray {
+	background-color: #EBF0F7;
+	
+}
+
+h1{
+	color: #141BFF;
+	font-size: 240px;
+	font-family: "WhyteInktrap", sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 200px;
+	word-wrap: break-word;
+	padding: 24px 0px 24px 0px;
+}
+
+h2{
+	font-size: 24px;
+	font-family: "NNNouvelleGrotesk", sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	word-wrap: break-word;
+}
+p{
+	font-size: 16px;
+	font-family: 'Noto Sans', sans-serif; ;
+	font-weight: light;
+	word-wrap: break-word;
+	line-height: 150%;
+}
+
+footer{
+	background-color: white;
+	font-family: 'Noto Sans', sans-serif; ;
+	font-weight: light;
+	margin: 0;
+	padding: 116px 144px 116px 144px;
+}
+
+blockquote{
+	color: fuchsia;
+	font-size: 32px;
+	/* font-style: normal; */
+	font-family: 'Courier Prime', monospace;
+	padding: 88px 0px 88px 0px;
+	line-height: 150
+	%;
+}
+
+.smallinfo{
+	font-style: normal;
+	font-family: "NNNouvelleGrotesk", sans-serif;
+	font-size: 18px;
+	line-height: 120%;
+
+}
+
+/* .linebreak {
+	line-height: 20px;
+} */
+
+p.smallinfo{
+	font-family: "NNNouvelleGrotesk", sans-serif;
+	font-size: 18px;
+}
+
+a[href^='https://'] { 
+	color: #232426;text-decoration: underline; 
+	/* How do I use arrow and underline at the same time?
+	::after { content: '↗'; } */
+}
+
+a[href^='https://']::after { content: ' ↗'; }
+a:visited { color: #757980; }
+a:hover { color: royalblue; }
+a:active { color: #232426; }
+
+.allign-right{
+	text-align: right;
+}
+.allign-left{
+	text-align: left;
+}
