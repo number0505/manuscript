@@ -17,15 +17,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
+
 section{
 	color: #232426;
-	padding: 48px 144px 116px 144px;
+	padding: 102px 144px 116px 144px;
+}
+.gray {
+	background-color: #f7f9fa;
 }
 
-.gray {
-	background-color: #EBF0F7;
-	
+header{
+	background-color: #f7f9fa;
+	height: 48px;
+	font: 14px 'Courier Prime', monospace;;
+	text-transform: capitalize;
+	line-height: 48px;
+	color: #232426;
+	border-bottom: solid #232426 1px;
+	padding-left: 144px;
+	padding-right: 1fr;
+	position: fixed;
+	left: 0px;
+	right:0px;
+	top: 0px;
+	min-width: 1000px;
 }
+
+.menu{
+	border-right: #232426 solid 1px;
+	padding-right: 20px ;
+	margin-right: 20px ;
+}
+
+
+a[href^='#box'] {text-decoration: underline; 
+}
+
+
+
+#grid1{
+	display: grid;
+	max-width: 1145px;
+	min-width: 975px;
+	grid-template-columns: 30% 70%;
+	/* border: green solid 2px; */
+}
+#grid2{
+	display: grid;
+	max-width: 1145px;
+	min-width: 975px;
+	grid-template-columns: 60% 40%;
+	/* border: red solid 2px; */
+	padding-top:40px;
+}
+
 
 h1{
 	color: #141BFF;
@@ -33,9 +78,10 @@ h1{
 	font-family: "WhyteInktrap", sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	line-height: 200px;
+	line-height: 140px;
 	word-wrap: break-word;
 	padding: 24px 0px 24px 0px;
+	min-width: 400px;
 }
 
 h2{
@@ -44,52 +90,80 @@ h2{
 	font-weight: 500;
 	text-transform: uppercase;
 	word-wrap: break-word;
+	min-width: 400px;
 }
+
 p{
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'Noto Sans', sans-serif; ;
 	font-weight: light;
 	word-wrap: break-word;
 	line-height: 150%;
+	min-width: 400px;
+	max-width: 65ch;
+
 }
 
-footer{
-	background-color: white;
-	font-family: 'Noto Sans', sans-serif; ;
-	font-weight: light;
-	margin: 0;
-	padding: 116px 144px 116px 144px;
+.article{
+	padding-left: 100px;
+	/* border: pink solid 2px; */
 }
 
 blockquote{
 	color: fuchsia;
 	font-size: 32px;
-	/* font-style: normal; */
 	font-family: 'Courier Prime', monospace;
-	padding: 88px 0px 88px 0px;
-	line-height: 150
-	%;
+	margin: 88px 0px 88px 0px;
+	line-height: 150%;
+}
+
+.indent1{
+	margin-left:240px;
+}
+.indent2{
+	margin-left:560px;
+}
+
+.typing-text{
+	border-right: 2px solid fuchsia;
+	animation: blink .8s infinite, typing 2s steps(24);
+	white-space: nowrap;
+	overflow: hidden;
+	width: fit-content;
+}
+
+
+@keyframes blink {
+	50%{
+		border-color: transparent;
+	}
+}
+
+@keyframes typing{
+	from{
+		width: 0;
+	}
+	to{
+		width: 466px;
+	}
 }
 
 .smallinfo{
 	font-style: normal;
 	font-family: "NNNouvelleGrotesk", sans-serif;
 	font-size: 18px;
+	text-transform:uppercase;
 	line-height: 120%;
-
 }
 
-/* .linebreak {
-	line-height: 20px;
-} */
 
 p.smallinfo{
-	font-family: "NNNouvelleGrotesk", sans-serif;
-	font-size: 18px;
+	font-size: 20px;
+	max-width: 100%;
+	/* border: green solid 2px; */
 }
 
-a[href^='https://'] { 
-	color: #232426;text-decoration: underline; 
+a[href^='https://'] {text-decoration: underline; 
 	/* How do I use arrow and underline at the same time?
 	::after { content: '↗'; } */
 }
@@ -99,9 +173,172 @@ a:visited { color: #757980; }
 a:hover { color: royalblue; }
 a:active { color: #232426; }
 
+
 .allign-right{
 	text-align: right;
 }
 .allign-left{
 	text-align: left;
 }
+
+.text-striped{
+	background: linear-gradient(#141BFF, #141BFF 50%, transparent 50%, transparent);
+	background-size: 100% 10px;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+
+#box{
+	background-color: white;
+	font-family: 'Noto Sans', sans-serif; ;
+	font-weight: light;
+	margin: 0;
+	padding: 116px 144px 116px 144px;
+	min-width: 400px;
+}
+
+footer{
+	background-color: #f7f9fa;
+	width: 1000px;
+	height: 0px;
+	position:fixed;
+	bottom: 0px;
+	left: 144px;
+	/* border: #232426 2px solid; */
+	padding-bottom: 60px;
+}
+
+.ruler {
+	width: 1152px;
+	/* margin: 20px auto; */
+	height: 50px;
+	border-top: 1px solid #232426;
+
+   }
+   
+   .ruler .cm,
+   .ruler .mm {
+	position: absolute;
+	border-left: 1px solid #232426;
+	height: 14px;
+	width: 100px;
+   }
+   .ruler .cm:after {
+	position: absolute;
+	bottom: -15px;
+	font: 11px/1 sans-serif;
+   }
+   .ruler .mm {
+	height: 5px;
+   }
+   .ruler .mm:nth-of-type(5) {
+	height: 10px;
+   }
+   .ruler .cm:nth-of-type(1) {
+	left: 0mm;
+   }
+   .ruler .cm:nth-of-type(1):after {
+	content: "0";
+   }
+   .ruler .cm:nth-of-type(2) {
+	left: 100px;
+   }
+   .ruler .cm:nth-of-type(2):after {
+	content: "1";
+   }
+   .ruler .cm:nth-of-type(3) {
+	left: 200px;
+   }
+   .ruler .cm:nth-of-type(3):after {
+	content: "2";
+   }
+   .ruler .cm:nth-of-type(4) {
+	left: 300px;
+   }
+   .ruler .cm:nth-of-type(4):after {
+	content: "3";
+   }
+   .ruler .cm:nth-of-type(5) {
+	left: 400px;
+   }
+   .ruler .cm:nth-of-type(5):after {
+	content: "4";
+   }
+   .ruler .cm:nth-of-type(6) {
+	left: 500px;
+   }
+   .ruler .cm:nth-of-type(6):after {
+	content: "5";
+   }
+   .ruler .cm:nth-of-type(7) {
+	left: 600px;
+   }
+   .ruler .cm:nth-of-type(7):after {
+	content: "6";
+   }
+   .ruler .cm:nth-of-type(8) {
+	left: 700px;
+   }
+   .ruler .cm:nth-of-type(8):after {
+	content: "7";
+   }
+   .ruler .cm:nth-of-type(9) {
+	left: 800px;
+   }
+   .ruler .cm:nth-of-type(9):after {
+	content: "8";
+   }
+   .ruler .cm:nth-of-type(10) {
+	left: 900px;
+   }
+   .ruler .cm:nth-of-type(10):after {
+	content: "9";
+   }
+   .ruler .cm:nth-of-type(11) {
+	left: 1000px;
+   }
+   .ruler .cm:nth-of-type(11):after {
+	content: "10";
+   }
+   .ruler .cm:nth-of-type(12) {
+	left: 1100px;
+   }
+   .ruler .cm:nth-of-type(12):after {
+	content: "11";
+   }
+   .ruler .mm:nth-of-type(1) {
+	left: 10%;
+   }
+   .ruler .mm:nth-of-type(2) {
+	left: 20%;
+   }
+   .ruler .mm:nth-of-type(3) {
+	left: 30%;
+   }
+   .ruler .mm:nth-of-type(4) {
+	left: 40%;
+   }
+   .ruler .mm:nth-of-type(5) {
+	left: 50%;
+   }
+   .ruler .mm:nth-of-type(6) {
+	left: 60%;
+   }
+   .ruler .mm:nth-of-type(7) {
+	left: 70%;
+   }
+   .ruler .mm:nth-of-type(8) {
+	left: 80%;
+   }
+   .ruler .mm:nth-of-type(9) {
+	left: 90%;
+   }
+   .ruler .mm:nth-of-type(10) {
+	left: 100%;
+   }
+   #mentionme{  
+	 text-align:center;
+	 margin-top:10%;
+   }
