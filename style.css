@@ -1,17 +1,17 @@
 @font-face {
-	font-family: 'WhyteInktrap';
-	src: url(font/ABCWhyteInktrap-Regular-Trial.otf) format("opentype");
-	font-weight: normal;
-}
-@font-face {
-	font-family: "NNNouvelleGrotesk";
-	src: url(font/NNNouvelleGroteskTrial-Medium.otf) format("opentype");
+	font-family: 'ClashDisplay';
+	src: url(font/ClashDisplay-Medium.ttf) format("opentype");
 	font-weight: 500;
 }
 @font-face {
-	font-family: "NNNouvelleGrotesk";
-	src: url(font/NNNouvelleGroteskTrial-Light.otf) format("opentype");
-	font-weight: light;
+	font-family: "Satoshi";
+	src: url(font/Satoshi-Medium.ttf) format("opentype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Satoshi";
+	src: url(font/Satoshi-Light.ttf) format("opentype");
+	font-weight: 300;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
@@ -75,18 +75,20 @@ a[href^='#box'] {text-decoration: underline;
 h1{
 	color: #141BFF;
 	font-size: 240px;
-	font-family: "WhyteInktrap", sans-serif;
-	font-weight: normal;
+	font-family: "ClashDisplay", sans-serif;
+	font-weight: 500;
 	text-transform: uppercase;
-	line-height: 140px;
+	line-height: 180px;
 	word-wrap: break-word;
 	padding: 24px 0px 24px 0px;
+	border: red, solid, 2px;
 	min-width: 400px;
+	max-width: 780px;
 }
 
 h2{
 	font-size: 24px;
-	font-family: "NNNouvelleGrotesk", sans-serif;
+	font-family: "Satoshi", sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 	word-wrap: break-word;
@@ -96,9 +98,9 @@ h2{
 p{
 	font-size: 18px;
 	font-family: 'Noto Sans', sans-serif; ;
-	font-weight: light;
+	font-weight: 300;
 	word-wrap: break-word;
-	line-height: 150%;
+	line-height: 160%;
 	min-width: 400px;
 	max-width: 65ch;
 
@@ -150,7 +152,8 @@ blockquote{
 
 .smallinfo{
 	font-style: normal;
-	font-family: "NNNouvelleGrotesk", sans-serif;
+	font-family: "Satoshi", sans-serif;
+	font-weight: 300;
 	font-size: 18px;
 	text-transform:uppercase;
 	line-height: 120%;
@@ -193,7 +196,7 @@ a:active { color: #232426; }
 #box{
 	background-color: white;
 	font-family: 'Noto Sans', sans-serif; ;
-	font-weight: light;
+	font-weight: 300;
 	margin: 0;
 	padding: 116px 144px 116px 144px;
 	min-width: 400px;
@@ -201,143 +204,15 @@ a:active { color: #232426; }
 
 footer{
 	background-color: #f7f9fa;
+	/* need to check*/
 	width: 1000px;
 	height: 0px;
 	position:fixed;
 	bottom: 0px;
-	left: 144px;
 	/* border: #232426 2px solid; */
 	padding-bottom: 60px;
 }
 
-.ruler {
-	width: 1152px;
-	/* margin: 20px auto; */
-	height: 50px;
-	border-top: 1px solid #232426;
-
-   }
-   
-   .ruler .cm,
-   .ruler .mm {
-	position: absolute;
-	border-left: 1px solid #232426;
-	height: 14px;
-	width: 100px;
-   }
-   .ruler .cm:after {
-	position: absolute;
-	bottom: -15px;
-	font: 11px/1 sans-serif;
-   }
-   .ruler .mm {
-	height: 5px;
-   }
-   .ruler .mm:nth-of-type(5) {
-	height: 10px;
-   }
-   .ruler .cm:nth-of-type(1) {
-	left: 0mm;
-   }
-   .ruler .cm:nth-of-type(1):after {
-	content: "0";
-   }
-   .ruler .cm:nth-of-type(2) {
-	left: 100px;
-   }
-   .ruler .cm:nth-of-type(2):after {
-	content: "1";
-   }
-   .ruler .cm:nth-of-type(3) {
-	left: 200px;
-   }
-   .ruler .cm:nth-of-type(3):after {
-	content: "2";
-   }
-   .ruler .cm:nth-of-type(4) {
-	left: 300px;
-   }
-   .ruler .cm:nth-of-type(4):after {
-	content: "3";
-   }
-   .ruler .cm:nth-of-type(5) {
-	left: 400px;
-   }
-   .ruler .cm:nth-of-type(5):after {
-	content: "4";
-   }
-   .ruler .cm:nth-of-type(6) {
-	left: 500px;
-   }
-   .ruler .cm:nth-of-type(6):after {
-	content: "5";
-   }
-   .ruler .cm:nth-of-type(7) {
-	left: 600px;
-   }
-   .ruler .cm:nth-of-type(7):after {
-	content: "6";
-   }
-   .ruler .cm:nth-of-type(8) {
-	left: 700px;
-   }
-   .ruler .cm:nth-of-type(8):after {
-	content: "7";
-   }
-   .ruler .cm:nth-of-type(9) {
-	left: 800px;
-   }
-   .ruler .cm:nth-of-type(9):after {
-	content: "8";
-   }
-   .ruler .cm:nth-of-type(10) {
-	left: 900px;
-   }
-   .ruler .cm:nth-of-type(10):after {
-	content: "9";
-   }
-   .ruler .cm:nth-of-type(11) {
-	left: 1000px;
-   }
-   .ruler .cm:nth-of-type(11):after {
-	content: "10";
-   }
-   .ruler .cm:nth-of-type(12) {
-	left: 1100px;
-   }
-   .ruler .cm:nth-of-type(12):after {
-	content: "11";
-   }
-   .ruler .mm:nth-of-type(1) {
-	left: 10%;
-   }
-   .ruler .mm:nth-of-type(2) {
-	left: 20%;
-   }
-   .ruler .mm:nth-of-type(3) {
-	left: 30%;
-   }
-   .ruler .mm:nth-of-type(4) {
-	left: 40%;
-   }
-   .ruler .mm:nth-of-type(5) {
-	left: 50%;
-   }
-   .ruler .mm:nth-of-type(6) {
-	left: 60%;
-   }
-   .ruler .mm:nth-of-type(7) {
-	left: 70%;
-   }
-   .ruler .mm:nth-of-type(8) {
-	left: 80%;
-   }
-   .ruler .mm:nth-of-type(9) {
-	left: 90%;
-   }
-   .ruler .mm:nth-of-type(10) {
-	left: 100%;
-   }
    #mentionme{  
 	 text-align:center;
 	 margin-top:10%;
