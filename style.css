@@ -14,13 +14,14 @@
 	font-weight: 300;
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
 
-section{
+main{
 	color: #232426;
-	padding: 102px 144px 116px 144px;
+	padding: 56px 144px 116px 144px;
 }
 .gray {
 	background-color: #f7f9fa;
@@ -28,8 +29,9 @@ section{
 
 header{
 	background-color: #f7f9fa;
+	width: 100%;
 	height: 48px;
-	font: 14px 'Courier Prime', monospace;;
+	font: 14px 'Courier Prime', monospace;
 	text-transform: capitalize;
 	line-height: 48px;
 	color: #232426;
@@ -37,53 +39,56 @@ header{
 	padding-left: 144px;
 	padding-right: 1fr;
 	position: fixed;
-	left: 0px;
-	right:0px;
-	top: 0px;
+	z-index: 2;
 	min-width: 1000px;
 }
 
 .menu{
 	border-right: #232426 solid 1px;
-	padding-right: 20px ;
-	margin-right: 20px ;
+	padding: 0px 12px 0px 20px;
 }
-
-
-a[href^='#box'] {text-decoration: underline; 
-}
-
 
 
 #grid1{
 	display: grid;
 	max-width: 1145px;
 	min-width: 975px;
-	grid-template-columns: 30% 70%;
-	/* border: green solid 2px; */
+	grid-template-columns: 25% 25% 25% 25% ;
 }
 #grid2{
 	display: grid;
 	max-width: 1145px;
 	min-width: 975px;
-	grid-template-columns: 60% 40%;
-	/* border: red solid 2px; */
-	padding-top:40px;
+	grid-template-columns: 30% 70%;
 }
 
+article{
+	max-width: 800px;
+}
+
+article:first-child {
+	position: relative;
+	top: 64px;
+	width: 100%;
+	z-index: 1;
+}
+article:nth-child(3) {
+	position: relative;
+	top: -66px;
+	width: 100%;
+}
 
 h1{
 	color: #141BFF;
-	font-size: 240px;
+	font-size: 200px;
 	font-family: "ClashDisplay", sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 	line-height: 180px;
 	word-wrap: break-word;
 	padding: 24px 0px 24px 0px;
-	border: red, solid, 2px;
 	min-width: 400px;
-	max-width: 780px;
+	max-width: 800px;
 }
 
 h2{
@@ -103,12 +108,12 @@ p{
 	line-height: 160%;
 	min-width: 400px;
 	max-width: 65ch;
-
+	padding-bottom: 20px;
 }
 
-.article{
+
+.paragraph{
 	padding-left: 100px;
-	/* border: pink solid 2px; */
 }
 
 blockquote{
@@ -132,6 +137,7 @@ blockquote{
 	white-space: nowrap;
 	overflow: hidden;
 	width: fit-content;
+	padding-bottom: 16px;
 }
 
 
@@ -154,7 +160,7 @@ blockquote{
 	font-style: normal;
 	font-family: "Satoshi", sans-serif;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform:uppercase;
 	line-height: 120%;
 }
@@ -166,12 +172,7 @@ p.smallinfo{
 	/* border: green solid 2px; */
 }
 
-a[href^='https://'] {text-decoration: underline; 
-	/* How do I use arrow and underline at the same time?
-	::after { content: '↗'; } */
-}
-
-a[href^='https://']::after { content: ' ↗'; }
+a[href^='https://']::after { content: '↗'; }
 a:visited { color: #757980; }
 a:hover { color: royalblue; }
 a:active { color: #232426; }
@@ -202,18 +203,5 @@ a:active { color: #232426; }
 	min-width: 400px;
 }
 
-footer{
-	background-color: #f7f9fa;
-	/* need to check*/
-	width: 1000px;
-	height: 0px;
-	position:fixed;
-	bottom: 0px;
-	/* border: #232426 2px solid; */
-	padding-bottom: 60px;
-}
 
-   #mentionme{  
-	 text-align:center;
-	 margin-top:10%;
-   }
+
